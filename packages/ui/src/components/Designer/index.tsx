@@ -171,6 +171,8 @@ Check this document: https://pdfme.com/docs/custom-schemas`);
       ...propPanel.defaultSchema,
     } as SchemaForUI;
 
+    console.log(JSON.stringify(s, null, 2))
+
     const paper = paperRefs.current[pageCursor];
     const rectTop = paper ? paper.getBoundingClientRect().top : 0;
     s.position.y = rectTop > 0 ? 0 : pageSizes[pageCursor].height / 2;
